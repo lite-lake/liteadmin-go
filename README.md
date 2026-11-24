@@ -38,4 +38,4 @@ cd packages/liteadmin-go
 go build ./... && go vet ./... && go test ./...
 ```
 
-本包零第三方依赖（仅标准库），无需 `go.work` 即可独立构建；`litecore-go` 通过 `require + replace` 引用本包（头名唯一权威的反向依赖），仓库内编译由 `lite-backend/go.work` 解析。
+本包零第三方依赖（仅标准库），无需 `go.work` 即可独立构建；`litecore-go` 通过 `require` 引用本包（头名唯一权威的反向依赖），公开仓独立构建取本模块正式发布版本，仓库内编译由 `lite-backend/go.work` 解析为本地源码。
